@@ -1,4 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
+  <div class="jumbotron">
+
+      <h1>Welcome to The Official USA Citizenship Site</h1>
+      <p>We are the only choice</p>
+
+      <% if user_signed_in? %>
+        <%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: 'btn btn-primary' %>
+      <% else %>
+        <%= link_to 'Login', new_user_session_path, class: 'btn btn-default' %>
+        <%= link_to 'Join', new_user_registration_path, class: 'btn btn-primary' %>
+      <% end %>
+
+</div>
 <%= link_to 'Posts', posts_path %>
