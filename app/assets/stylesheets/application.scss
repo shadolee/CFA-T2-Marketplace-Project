@@ -22,13 +22,20 @@
   height: 100%;
 }
 
-html {
+.html {
   height: 100%;
+  background-size: cover;
+}
+
+.body {
+  height: 100%;
+  background-size: cover;
 }
 
 .registration-bg {
   padding-top: 4em;
   height: 100%;
+  width: 100%;
   background-image: url("https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg");
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -44,7 +51,7 @@ html {
 }
 
 .panel {
-  border-radius: 8px;
+  border-radius: 18px;
 }
 
 .panel-heading{
@@ -53,16 +60,13 @@ html {
   }
 }
 
-.navbar {
-  margin-bottom: 0px;
-}
-
 .alert {
   margin-bottom: 0px;
 }
 
-.login-bg {
+#forgotten {
   padding-top: 4em;
+  padding-bottom: 20em;
   height: 100%;
   background-image: url('https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg');
   -moz-background-size: cover;
@@ -73,5 +77,6 @@ html {
 
 .navbar {
   background-color: transparent;
-  opacity: 0.6; 
+  opacity: 0.6;
+  margin-bottom: 0px;
 }
