@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def sellproduct
     @sellproduct = current_user.products
-  end 
+  end
 
   def index
     @products = Product.all
@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @product.user_id = current_user.id if current_user
+    @product.user_id = current_user.id
 
     respond_to do |format|
       if @product.save

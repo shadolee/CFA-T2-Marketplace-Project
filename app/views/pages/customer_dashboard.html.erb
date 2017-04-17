@@ -1,0 +1,49 @@
+
+<h1>Customer Dashboard</h1>
+
+<h3>Ready for Payment</h3>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Number</th>
+			<th>Price</th>
+			<th>Title</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @approved_bookings.each do |booking| %>
+			<tr>
+				<td><%= booking.number %></td>
+				<td><%= number_to_currency(booking.product.price) %></td>
+				<td><%= booking.product.title %></td>
+				<td><%= render 'partials/stripe', booking: booking %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<h3>Already Paid</h3>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Number</th>
+			<th>Price</th>
+			<th>Title</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @paid_bookings.each do |booking| %>
+			<tr>
+				<td><%= booking.number %></td>
+				<td><%= number_to_currency(booking.product.price) %></td>
+				<td><%= booking.product.title %></td>
+				<td>payment button</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<h3>Pending Approval</h3>

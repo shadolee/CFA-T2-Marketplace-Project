@@ -1,0 +1,34 @@
+<h1>Admin Dashboard</h1>
+
+<!-- add user who booked a booking -->
+
+<h3>My Bookings</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Booking Time</th>
+      <th>Number</th>
+      <th>Approved?</th>
+      <th>Update</th>
+    </tr>
+  </thead>
+  <tbody>
+		<% @products.each do |product| %>
+			<% product.bookings.each do |booking| %>
+				<tr>
+	        <td><%= booking.user.email %></td>
+	        <td><%= booking.product.title %></td>
+	        <td><%= number_to_currency(booking.product.price) %></td>
+	        <td><%= booking.created_at %></td>
+	        <td><%= booking.number %></td>
+	        <td><%= yes_no(booking.approved) %></td>
+	        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+	      </tr>
+			<% end %>
+		<% end %>
+  </tbody>
+</table>
