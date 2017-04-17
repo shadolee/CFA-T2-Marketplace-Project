@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# added to access Gravatar API as Gravatar gem is out of date 
+gem 'xmlrpc'
+# Gravatar is a Globally Recognized Avatar, in any Gravatar-enabled site, your Gravatar image will automatically follow you there.
+gem 'gravatar-ultimate'
 # allow users to sign in with Facebook
 gem 'omniauth-facebook'
 # bootstrap for front end design

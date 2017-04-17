@@ -12,7 +12,10 @@
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Forum', posts_path %></li>
-        <li><a href="#">Page 2</a></li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Sell Your USA Citizenship', new_product_path %></li>
+        <% else %>
+        <% end %>
         <li><a href="#">Page 3</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -23,7 +26,10 @@
           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
         </li>
         <li>
-          <%= link_to('Edit Your Profile', edit_user_registration_path) %>
+        <%= image_tag(Gravatar.new(current_user.email).image_url, size: "40") %>
+      </li> 
+        <li>
+          <%= link_to(current_user.email, edit_user_registration_path) %>
         </li>
       <% else %>
         <li>
