@@ -1,16 +1,23 @@
-<h1>Admin Dashboard</h1>
+<div class="registration-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="log-in panel">
+          <div class="panel-heading">
+
+<h1>Sellers Dashboard</h1>
 
 <!-- add user who booked a booking -->
 
-<h3>My Bookings</h3>
+<h3>My Sales</h3>
 
-<table class="table">
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Cost ($USD)</th>
-      <th>Product ID</th>
-      <th>User ID</th>
-      <th>Number</th>
+      <th>Product</th>
+      <th>User Email</th>
+      <th># of Units</th>
       <th>Approved?</th>
     </tr>
   </thead>
@@ -19,8 +26,8 @@
 			<% product.bookings.each do |booking| %>
 				<tr>
           <td><%= number_to_currency(booking.product.price) %></td>
-	        <td><%= booking.product_id %></td>
-	        <td><%= booking.user_id %></td>
+	        <td><%= booking.product.title %></td>
+	        <td><%= booking.user.email %></td>
 	        <td><%= booking.number %></td>
 	        <td><%= yes_no(booking.approved) %></td>
 	        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
@@ -29,3 +36,10 @@
 		<% end %>
   </tbody>
 </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

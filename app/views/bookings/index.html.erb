@@ -1,8 +1,15 @@
+<div class="registration-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="log-in panel">
+          <div class="panel-heading">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Bookings</h1>
+<h1>Your Bookings</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -19,8 +26,8 @@
       <tr>
         <td><%= booking.product.title %></td>
         <td><%= number_to_currency(booking.product.price) %></td>
-        <td><%= booking.product %></td>
-        <td><%= booking.user %></td>
+        <td><%= booking.product.title %></td>
+        <td><%= booking.user.email %></td>
         <td><%= booking.number %></td>
         <td><%= link_to 'Show', booking %></td>
         <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
@@ -32,6 +39,13 @@
 
 <br>
 
-<%= link_to 'New Booking', new_booking_path %><br>
+<%= link_to 'Make A New Booking', new_booking_path, class: 'btn btn-primary'  %><br>
+<br>
+<%= link_to 'Click here to make payment', buyer_dashboard_path, class: 'btn btn-success' %>
 
-<%= link_to 'Click here to make payment', customer_dashboard_path %>
+              </div>
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>

@@ -19,8 +19,8 @@ Rails.application.routes.draw do
     delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 end
   root 'pages#home'
-  get 'admin_dashboard', to: 'pages#admin_dashboard'
-  get 'customer_dashboard', to: 'pages#customer_dashboard'
+  get 'seller_dashboard', to: 'pages#seller_dashboard'
+  get 'buyer_dashboard', to: 'pages#buyer_dashboard'
   #resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
