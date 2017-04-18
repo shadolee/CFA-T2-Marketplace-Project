@@ -27,6 +27,13 @@
     <%= f.number_field :number %>
   </div>
 
+  <p>If you own this booking would you like to approve it?</p>
+
+  <div class="field">
+    <%= f.label :approved %>
+    <%= f.check_box :approved %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

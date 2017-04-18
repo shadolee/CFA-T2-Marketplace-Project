@@ -9,7 +9,7 @@
 			<th>Number</th>
 			<th>Price</th>
 			<th>Title</th>
-			<th></th>
+			<th>Pay</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -40,10 +40,30 @@
 				<td><%= booking.number %></td>
 				<td><%= number_to_currency(booking.product.price) %></td>
 				<td><%= booking.product.title %></td>
-				<td>payment button</td>
+				<td><%= render 'partials/stripe' %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
 
 <h3>Pending Approval</h3>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Number</th>
+			<th>Price</th>
+			<th>Title</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @pending_bookings.each do |booking| %>
+			<tr>
+				<td><%= booking.number %></td>
+				<td><%= number_to_currency(booking.product.price) %></td>
+				<td><%= booking.product.title %></td>
+				<td>You will be able to make payment once approval granted</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

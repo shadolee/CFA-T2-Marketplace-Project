@@ -7,23 +7,20 @@
 <table class="table">
   <thead>
     <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Price</th>
-      <th>Booking Time</th>
+      <th>Cost ($USD)</th>
+      <th>Product ID</th>
+      <th>User ID</th>
       <th>Number</th>
       <th>Approved?</th>
-      <th>Update</th>
     </tr>
   </thead>
   <tbody>
 		<% @products.each do |product| %>
 			<% product.bookings.each do |booking| %>
 				<tr>
-	        <td><%= booking.user.email %></td>
-	        <td><%= booking.product.title %></td>
-	        <td><%= number_to_currency(booking.product.price) %></td>
-	        <td><%= booking.created_at %></td>
+          <td><%= number_to_currency(booking.product.price) %></td>
+	        <td><%= booking.product_id %></td>
+	        <td><%= booking.user_id %></td>
 	        <td><%= booking.number %></td>
 	        <td><%= yes_no(booking.approved) %></td>
 	        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>

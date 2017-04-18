@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Title</th>
+      <th>Cost ($USD)</th>
       <th>Product</th>
       <th>User</th>
       <th>Number</th>
@@ -15,6 +17,8 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
+        <td><%= booking.product.title %></td>
+        <td><%= number_to_currency(booking.product.price) %></td>
         <td><%= booking.product %></td>
         <td><%= booking.user %></td>
         <td><%= booking.number %></td>
@@ -28,4 +32,6 @@
 
 <br>
 
-<%= link_to 'New Booking', new_booking_path %>
+<%= link_to 'New Booking', new_booking_path %><br>
+
+<%= link_to 'Click here to make payment', customer_dashboard_path %>
