@@ -35,6 +35,12 @@
     <%= f.text_area :description, autofocus: true, class: 'form-control', required: true %>
   </div><br><br>
 
+  <div class="field">
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true %>
+  </div>
+
+
   <div class="panel-body">
     <%= f.submit "List my citizenship for sale", class: "btn-lg btn-info btn-block" %>
   </div>

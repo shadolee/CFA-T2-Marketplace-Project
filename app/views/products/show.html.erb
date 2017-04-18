@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Book Now', new_booking_path(product_id: @product.id), class: 'btn btn-primary' %>
+
+
 <p>
   <strong>Price:</strong>
   <%= @product.price %>

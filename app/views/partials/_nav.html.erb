@@ -1,4 +1,4 @@
-<nav class="navbar navbar-transparent">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
@@ -27,7 +27,7 @@
         </li>
         <li>
         <%= image_tag(Gravatar.new(current_user.email).image_url, size: "40") %>
-      </li> 
+      </li>
         <li>
           <%= link_to(current_user.email, edit_user_registration_path) %>
         </li>

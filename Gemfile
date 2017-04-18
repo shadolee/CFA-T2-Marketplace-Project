@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# upload files 
+gem 'carrierwave', '~> 1.0'
 # allows us to accept payments
 gem 'stripe'
 # added to access Gravatar API as Gravatar gem is out of date
