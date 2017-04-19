@@ -46,7 +46,6 @@
 				<td><%= booking.number %></td>
 				<td><%= number_to_currency(booking.product.price) %></td>
 				<td><%= booking.product.title %></td>
-				<td><%= render 'partials/stripe' %></td>
 			</tr>
 		<% end %>
 	</tbody>

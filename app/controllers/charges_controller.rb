@@ -1,10 +1,11 @@
 class ChargesController < ApplicationController
 	def new
- end
+  end
 
 	def create
+		@booking = Booking.find(params[:id])
 	  # Amount in cents
-	  @amount = 500
+	  @amount = (@booking.product.price * 100).to_i
 
 	  customer = Stripe::Customer.create(
 	    :email => params[:stripeEmail],
@@ -14,12 +15,16 @@ class ChargesController < ApplicationController
 	  charge = Stripe::Charge.create(
 	    :customer    => customer.id,
 	    :amount      => @amount,
-	    :description => 'Rails Stripe customer',
+	    :description => "Booking id: #{@booking.id}",
 	    :currency    => 'usd'
 	  )
 
+		@transaction = Transaction.create(amount: @amount,
+			user_id: current_user.id, booking_id: @booking.id)
+
+
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
-	  redirect_to new_charge_path
+	  redirect_to buyer_dashboard_path
 	end
 end

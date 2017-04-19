@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   resources :bookings do
-    # member do
-    #   resources :charges
-    # end
+    member do
+      resources :charges
+    end
   end
 
-  resources :charges
+  # resources :charges
   resources :products
   get 'users/show'
   get 'pages/sellproduct'
