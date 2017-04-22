@@ -21,6 +21,6 @@ end
   root 'pages#home'
   get 'seller_dashboard', to: 'pages#seller_dashboard'
   get 'buyer_dashboard', to: 'pages#buyer_dashboard'
-  #resources :users
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
