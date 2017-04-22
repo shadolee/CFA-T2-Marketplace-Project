@@ -31,7 +31,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   # changed delivery_method from :smtp to :letter_opener so email will
-  # open in browser rather than send during developement 
+  # open in browser rather than send during developement
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.smtp_settings = {
   :authentication => :plain,
