@@ -5,6 +5,17 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# gems required to support Active Admin dashboard
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'activeadmin', '~> 1.0.0.pre4'
+gem 'ransack',    github: 'activerecord-hackery/ransack'
+gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
+gem 'formtastic', github: 'justinfrench/formtastic'
+gem 'draper',     github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+
+gem 'jquery-ui-rails', '~> 5.0.4'
+
 # control authorisation
 gem "pundit"
 # static code analyser
