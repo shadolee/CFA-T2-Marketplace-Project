@@ -13,7 +13,8 @@
         <li class="active"><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Forum', posts_path %></li>
         <% if user_signed_in? %>
-          <li><%= link_to 'Sell Your USA Citizenship', new_product_path %></li>
+          <li><%= link_to 'Buy USA Citizenship', products_path %></li>
+          <li><%= link_to 'Sell USA Citizenship', new_product_path %></li>
           <li><%= link_to 'Buyer Dashboard', 'buyer_dashboard' %></li>
           <li><%= link_to 'Seller Dashboard', 'seller_dashboard' %></li>
         <% else %>

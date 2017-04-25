@@ -17,9 +17,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.jumbotron {
+.container-fluid {
   text-align: center;
-  height: 100%;
+
 }
 
 .html {
@@ -66,19 +66,31 @@
   margin-bottom: 0px;
 }
 
-#forgotten {
-  padding-top: 4em;
-  padding-bottom: 20em;
-  height: 100%;
-  background-image: url('https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg');
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+// #forgotten {
+//   padding-top: 4em;
+//   padding-bottom: 20em;
+//   height: 100%;
+//   background-image: url('https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg');
+//   -moz-background-size: cover;
+//   -webkit-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
 
 .navbar {
   // background-color: transparent;
   // opacity: 0.6;
-  margin-bottom: 0px;
+  margin-bottom: -20px;
 }
+
+.bg-grey {
+      background-color: #ffff66;
+  }
+
+#newlife {
+      background-color: #3399ff;
+      margin-top: -30px;
+      margin-bottom: -60px;
+      padding-bottom: 60px;
+      padding-top: 30px;
+  }

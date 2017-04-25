@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe BookingMailerMailer, type: :mailer do
+RSpec.describe BookingMailer, type: :mailer do
   describe "booking_confirmation" do
-    let(:mail) { BookingMailerMailer.booking_confirmation }
+    let(:mail) { BookingMailer.booking_confirmation }
 
     it "renders the headers" do
       expect(mail.subject).to eq("Booking confirmation")
