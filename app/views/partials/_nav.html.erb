@@ -15,11 +15,11 @@
         <% if user_signed_in? %>
           <li><%= link_to 'Buy USA Citizenship', products_path %></li>
           <li><%= link_to 'Sell USA Citizenship', new_product_path %></li>
-          <li><%= link_to 'Buyer Dashboard', 'buyer_dashboard' %></li>
-          <li><%= link_to 'Seller Dashboard', 'seller_dashboard' %></li>
+          <li><a href="/buyer_dashboard">Buyer Dashboard</a></li>
+          <li><a href="/seller_dashboard">Seller Dashboard</a></li>
         <% else %>
         <% end %>
-        
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
