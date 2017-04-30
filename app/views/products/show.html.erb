@@ -29,7 +29,7 @@
   <%= @product.user.email  %>
 </p>
 
-<%= link_to 'Buy Now', new_booking_path(product_id: @product.id), class: 'btn btn-primary' %>
+<%= link_to 'Add to Cart', new_booking_path(product_id: @product.id), class: 'btn btn-primary' %>
 
 <% @product.images.each do |image| %>
   <img src="<%= image.url %>">
