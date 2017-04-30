@@ -66,7 +66,11 @@
 
 .container-fluid {
   text-align: center;
+}
 
+.cd {
+  text-align: center;
+  font-size: 200%
 }
 
 .html {
@@ -74,10 +78,9 @@
   background-size: cover;
 }
 
-// .body {
-//   height: 100%;
-//   background-size: cover;
-// }
+.navbar {
+  margin-bottom: -20px;
+}
 
 .registration-bg {
   margin-top: 0em;
@@ -113,27 +116,6 @@
   margin-bottom: 0px;
 }
 
-// #forgotten {
-//   padding-top: 4em;
-//   padding-bottom: 20em;
-//   height: 100%;
-//   background-image: url('https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg');
-//   -moz-background-size: cover;
-//   -webkit-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
-
-.navbar {
-  // background-color: transparent;
-  // opacity: 0.6;
-  margin-bottom: -20px;
-}
-
-// .bg-grey {
-//       background-color: #ffff66;
-//   }
-
 #newlife {
 
       margin-top: -30px;
@@ -166,4 +148,22 @@
   border: 10px;
   border-radius: 0;
 
+}
+
+#contact {
+  background-image: url("https://www.walldevil.com/wallpapers/a80/winter-snow-new-york-city-new-york-usa.jpg");
+  padding-bottom: 40em;
+  height: 100%;
+  width: 100%;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #f4511e;
+  margin-top: -190px;
+}
+
+#details {
+  padding-top: 200px;
+  font-size: 500%;
 }
