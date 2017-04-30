@@ -20,6 +20,6 @@
 # User.create!(email: 'user13@mail.com', password: 'password', password_confirmation: 'password')
 # User.create!(email: 'user14@mail.com', password: 'password', password_confirmation: 'password')
 
-Product.create!(price: 250000, title: '1 x USA Citizenship', description: 'Government issued citizenship slot available', user_id: 2 )
+Product.create!(price: 250000, title: '1 x USA Citizenship', description: 'Government issued citizenship slot available' )
 
-Post.create!(title: 'This is a post', content: 'This is some text', user_id: 2)
+Post.create!(title: 'This is a post', content: 'This is some text')
