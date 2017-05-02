@@ -17,10 +17,13 @@
   <%= @post.content %>
 </p>
 
+<!-- commented out as has issue when deploying to Heroku -->
 <p>
   <strong>User Email:</strong>
-  <%#= @post.user.email  %>
+  <%= @post.user.email  %>
 </p>
+
+<!-- policy is related to pundit authorisation -->
 
 <% if policy(@post).edit? %>
     <%= link_to "Edit", edit_post_path( @post ) if @record.user? %>

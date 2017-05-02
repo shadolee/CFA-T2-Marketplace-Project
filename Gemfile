@@ -13,7 +13,6 @@ gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
 gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'draper',     github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
 gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
-
 gem 'jquery-ui-rails', '~> 5.0.4'
 
 # control authorisation

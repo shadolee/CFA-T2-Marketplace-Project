@@ -12,15 +12,15 @@ class UsersController < ApplicationController
     #authorize @user
   end
 
-  # def update
-  #   @user = User.find(params[:id])
-  #   authorize @user
-  #   if @user.update_attributes(secure_params)
-  #     redirect_to users_path, :notice => "User updated."
-  #   else
-  #     redirect_to users_path, :alert => "Unable to update user."
-  #   end
-  # end
+  def update
+    @user = User.find(params[:id])
+    authorize @user
+    if @user.update_attributes(secure_params)
+      redirect_to users_path, :notice => "User updated."
+    else
+      redirect_to users_path, :alert => "Unable to update user."
+    end
+  end
 
   def destroy
     user = User.find(params[:id])
@@ -29,10 +29,10 @@ class UsersController < ApplicationController
     redirect_to users_path, :notice => "User deleted."
   end
 
-  # private
-  #
-  # def secure_params
-  #   params.require(:user).permit(:role)
-  # end
+  private
+
+  def secure_params
+    params.require(:user).permit(:role)
+  end
 
 end

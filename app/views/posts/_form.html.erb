@@ -1,3 +1,5 @@
+<!-- form_for creates a form that allows the user to create or update the attributes of a specific model object. -->
+
 <%= form_for(post) do |f| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -20,11 +22,6 @@
     <%= f.label :content %>
     <%= f.text_area :content %>
   </div>
-
-  <!-- <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div> -->
 
   <div class="actions">
     <%= f.submit %>

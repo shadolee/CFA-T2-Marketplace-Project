@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
-  # resources :charges
+  
   resources :products
   get 'users/show'
   get 'pages/sellproduct'
